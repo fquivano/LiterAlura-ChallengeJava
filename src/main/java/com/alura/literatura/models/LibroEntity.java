@@ -44,7 +44,7 @@ public class LibroEntity {
         if (libroData.autores() != null && !libroData.autores().isEmpty()) {
             this.autor = new AutorEntity(libroData.autores().get(0));
         } else {
-            this.autor = null; // o maneja el caso de que no haya autor
+            this.autor = null; // no hay autor
         }
         this.genero = validarGenero(libroData.genero());
         this.lenguaje = validarLenguaje(libroData.lenguajes());

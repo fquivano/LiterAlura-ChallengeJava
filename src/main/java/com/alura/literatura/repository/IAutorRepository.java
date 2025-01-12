@@ -12,9 +12,5 @@ public interface IAutorRepository extends JpaRepository<AutorEntity, Long> {
     AutorEntity findByNombre(String nombre);
 
     List<AutorEntity> findByFechaNacimientoLessThanOrFechaDeDefuncionGreaterThanEqual(int anioInicio, int anioFin);
-/*
-    Optional<AutorEntity> findFirstByNombreContainsIgnoreCase(String escritor);
-
- */
 
 }

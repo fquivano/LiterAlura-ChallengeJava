@@ -184,7 +184,7 @@ public class Main {
                 }
             } else {
                 System.out.println("Entrada no válida. Debes ingresar un número de año válido (sin letras).");
-                teclado.nextLine(); // Limpiar el buffer en caso de que el usuario ingrese algo no numérico
+                teclado.nextLine(); // Limpiar si el usuario ingrese algo no numérico
             }
         }
         return anioConsulta;
@@ -195,7 +195,7 @@ public class Main {
     }
 
     private void mostrarAutoresVivos(List<AutorEntity> autoresVivos, int anioConsulta) {
-        Set<String> autoresUnicos = new HashSet<>(); // Evitar repetir autores
+        Set<String> autoresUnicos = new HashSet<>(); // no permite repetir autores
 
         for (AutorEntity autor : autoresVivos) {
             if (esAutorVivoEnAnio(autor, anioConsulta) && autoresUnicos.add(autor.getNombre())) {
@@ -205,7 +205,7 @@ public class Main {
     }
 
     private boolean esAutorVivoEnAnio(AutorEntity autor, int anioConsulta) {
-        // Verifica si el autor estuvo vivo en el año dado
+        // autor vivo en el año dado
         return autor.getFechaNacimiento() != null &&
                 autor.getFechaDeDefuncion() != null &&
                 autor.getFechaNacimiento() <= anioConsulta &&

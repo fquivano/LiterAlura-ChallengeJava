@@ -12,15 +12,5 @@ public interface ILibroRepository extends JpaRepository<LibroEntity, Long> {
     boolean existsByTitulo(String titulo);
 
     List<LibroEntity> findByLenguaje(String idioma);
-/*
-    LibroEntity findByTituloContainsIgnoreCase(String titulo);
 
-
-
-
-
-
-    @Query("SELECT l FROM Libro l JOIN FETCH l.autor ORDER BY l.numeroDescargas DESC")
-    List<LibroEntity> findTop10Libros(Pageable pageable);
-*/
 }
